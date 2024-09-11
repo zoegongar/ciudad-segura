@@ -1,0 +1,15 @@
+{
+    "builds": [
+      {
+        "src": "frontend/proyecto-3-ciudad-segura/package.json",
+        "use": "@vercel/static-build",
+        "config": {
+          "distDir": "frontend/proyecto-3-ciudad-segura/build"
+        }
+      }
+    ],
+    "routes": [
+      { "src": "/(.*)", "dest": "frontend/proyecto-3-ciudad-segura/$1" }
+    ]
+  }
+  
