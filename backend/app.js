@@ -1,31 +1,40 @@
-// importamos dotenv para sacar las variables necesarias, usamos express para el servidor
-// y morgan para su respectivo uso y filepload para recibir archivos
-
+// Importamos dotenv para sacar las variables necesarias, usamos express para el servidor
+// y morgan para su respectivo uso y fileUpload para recibir archivos
 import express from 'express';
 import morgan from 'morgan';
 import fileUpload from 'express-fileupload';
 import cors from 'cors';
 
-//  importamos las rutas
+// Importamos las rutas
 import routes from './src/routes/index.js';
 import errorController from './src/controllers/errores/errorController.js';
-import { PORT } from './env.js';
-// creamos server express y utilizamos morgan
+
+// Inicializamos el servidor express
 const app = express();
+
+// Configuración de morgan para logging
 app.use(morgan('dev'));
 
-// usamos express para recibir leer los datos que lleguen en json y en formato filedata
+// Middleware para procesar JSON y archivos
 app.use(express.json());
-
 app.use(cors());
 app.use(fileUpload());
-// indicamos a express la ruta del archivo estatico
+
+// Configuración de rutas estáticas para archivos subidos
 app.use('/uploads', express.static('./src/uploads'));
-// usamos e indica el router
+
+// Configuración de las rutas principales
 app.use(routes);
-// le indicamos a express el controlador de errores
+
+// Controlador de errores
 app.use(errorController);
-// ponemos a escuchar el servidor
+
+// Configuración del puerto
+const PORT = process.env.PORT || 5000; // Usa el puerto proporcionado por el entorno o el puerto 5000 por defecto
+
+// Inicializamos el servidor
 app.listen(PORT, () => {
-  console.log(`servidor escuchando en http://localhost:${PORT}`);
+  console.log(`Servidor escuchando en http://localhost:${PORT}`);
 });
+
+export default app; // Exportamos la aplicación para posibles pruebas o usos futuros
