@@ -1,0 +1,30 @@
+.div {
+  background-color: rgba(255, 255, 255, 0.593);
+  font-size: 24px;
+  font-family: 'MedievalSharp', cursive;
+}
+.div.menuAdmin {
+  height: 100%;
+  padding: 100px;
+}
+
+.menuAdmin {
+  margin: 0 1rem;
+  font-size: 26px;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.menuAdmin li {
+  height: 100%;
+  text-align: center;
+  padding: 10px;
+  background-color: rgba(142, 102, 43, 1);
+  list-style: none;
+  border: 1px solid black;
+  border-radius: 20px;
+}
+a {
+  text-decoration: none;
+}

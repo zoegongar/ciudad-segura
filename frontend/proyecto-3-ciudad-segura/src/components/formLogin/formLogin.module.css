@@ -1,0 +1,94 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}
+.content {
+  margin: 30px;
+  width: auto;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+  background-color: rgba(255, 255, 255, 0.593);
+  box-shadow: 7px 7px 22px 3px rgba(0, 0, 0, 0.54);
+  padding: 2rem;
+  border-radius: 20px;
+  gap: 20px;
+}
+.field input {
+  border: none;
+  border-bottom: 1px solid #3f3f3f;
+  background: none;
+  padding: 3px 0;
+  /* margin-top: 20px; */
+  margin: 25px 0;
+  width: 100%;
+}
+
+.content h2 {
+  font-size: 30px;
+  font-family: 'MedievalSharp', cursive;
+}
+.enviar {
+  text-align: center;
+  padding: 30px;
+}
+.login {
+  border-radius: 50px;
+  padding: 8px;
+  margin: 15px;
+  font-size: 15px;
+  background-color: rgb(142, 102, 43);
+  cursor: pointer;
+  font-family: 'MedievalSharp', cursive;
+  font-size: 15px;
+  border: 1px solid black;
+}
+.login:hover {
+  box-shadow: 7px 7px 22px 3px rgba(0, 0, 0, 0.133);
+}
+.recuperarpass {
+  text-align: center;
+  padding: 20px;
+  font-size: 15px;
+  font-family: 'MedievalSharp', cursive;
+}
+.recuperarpass p:hover {
+  text-shadow: 5px 4px 2px rgba(0, 0, 0, 0.6);
+}
+.link:hover {
+  text-decoration: none;
+}
+.ojo {
+  margin-top: -65px;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+}
+.ojo svg {
+  width: 25px;
+  cursor: pointer;
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-text-fill-color: initial !important; /* Restablece el color del texto */
+  transition: background-color 5000s ease-in-out 0s; /* Agrega una transición muy larga */
+}
+.error {
+  text-align: center;
+  margin: 0;
+  background-color: #b3adbb;
+  padding: 1em;
+  font-size: 0.9rem;
+  max-height: 50px;
+  border-radius: 10px;
+}

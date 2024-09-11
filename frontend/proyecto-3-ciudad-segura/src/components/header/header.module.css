@@ -1,0 +1,34 @@
+.header {
+  width: 100%;
+  height: auto;
+  display: flex;
+  /* flex-direction: row; */
+  align-items: center;
+  opacity: 0.8;
+  padding: 20px;
+  background: rgb(142, 102, 43);
+}
+.img {
+  width: 4.5rem;
+  margin-right: 10px;
+}
+.li {
+  list-style: none;
+  padding: 0.5rem;
+}
+
+.li:hover {
+  text-shadow: -1px 1px 22px rgba(0, 0, 0, 0.69);
+}
+ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.link {
+  text-decoration: none;
+  font-size: 25px;
+  font-family: 'MedievalSharp', cursive;
+}
